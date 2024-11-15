@@ -62,7 +62,7 @@ export default function TodoList() {
         if ((todo.id == id)) {
           return {
             ...todo,
-            isDone: true,
+            isDone: !todo.id,
           };
         } else {
           return {
