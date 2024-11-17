@@ -1,9 +1,14 @@
 import "./App.css";
 import Lottery from "./Lottery";
+import { sum } from "./helper";
+
 function App() {
+  let winCondition = (ticket) => {
+    return ticket[0] === 0;
+  };
   return (
     <>
-      <Lottery n={5} winningSum={55} />
+      <Lottery n={3} winCondition={winCondition} />
     </>
   );
 }
